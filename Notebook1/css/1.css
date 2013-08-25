@@ -1,0 +1,102 @@
+body {
+	margin: 0;
+	background: url(../img/wood_pattern2.png);
+	color: #999999;
+	font: 11px Georgia, "Times New Roman" serif;
+}
+hr {
+	border: #000 solid 1px;
+	margin: 1px;
+}
+h1 {
+	text-align: center;
+	font-family: "GiddyupStd" serif;
+	color: #d6c48b;
+	padding-top: 20px;
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+	font-size: 40px;
+	margin: 0;
+}
+@font-face {
+	font-family: GiddyupStd;
+	src: url(font/GiddyupStd.otf;);
+}
+
+
+
+
+/*--------------------------------------------------------notepad---------------------------------------------------*/
+
+#notepad_1 {
+	position: relative;
+	z-index: -3; /* элемент теперь в самом низу и сделали рамку вокруг */
+	background-color: #422f2a;
+	border: #000 solid 1px;
+	margin: 20px auto;
+	width: 424px;
+	border-radius: 1px;
+	box-shadow: 0 0 20px inset;
+	box-shadow: 1px 1px 10px;
+}
+#notepad {
+	position: relative;
+	z-index: -2; /* так сказать внутренняя рамка */
+	margin: 1px;
+	background: url(../img/leather.png);
+	border: #000 solid 1px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.7) inset;
+	padding-bottom: 20px;
+}
+#top_bar {
+	position: relative;
+	z-index: 1; /* должен быть выше листа */
+	background: url(../img/top_bar2.png) no-repeat scroll center top;
+	width: 390px;
+	height: 100px;
+	margin: 10px auto 0;
+}
+#list {
+	margin: -12px auto 0;
+	min-height: 400px;
+	width: 382px;
+	background: url(../img/list.gif);
+}
+/* тень листа справа */
+#list:after {
+    content: "";
+    position: absolute;
+    top: -60px;
+    z-index: -1; /* и не под блокнотом и не на листке... там где нужно */
+    width: 380px;
+    height: 478px;
+    box-shadow: 40px 8px 10px rgba(0, 0, 0, 0.8);
+    -webkit-transform: skewY(25deg);
+    -moz-transform: skewY(25deg);
+    -ms-transform: skewY(25deg);
+    -o-transform: skewY(25deg);
+    transform: skewY(25deg);
+}
+#list_bottom {
+	height: 11px;
+	width: 382px;
+	background: url(../img/list_bottom.png) no-repeat;
+	background-size: 100%;
+	margin: 0 auto;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5) inset;
+}
+/* тень листа снизу */
+#list_bottom:after {
+    content: "";
+    position: absolute;
+    z-index: -1; /* и не под блокнотом и не на листке... там где нужно */
+    border-radius: 10px;
+    margin: -20px 0 0 -26px;
+    width: 380px;
+    height: 30px;
+    box-shadow: 0px 24px 5px rgba(0, 0, 0, 0.7);
+    -webkit-transform: skewX(60deg);
+    -moz-transform: skewX(60deg);
+    -ms-transform: skewX(60deg);
+    -o-transform: skewX(60deg);
+    transform: skewX(60deg);
+}
